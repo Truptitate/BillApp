@@ -1,0 +1,121 @@
+import java.util.*;
+class Cal
+{
+  int x,y;
+ public void SetVariable(int a,int b)
+	{
+	 x=a;
+	 y=b;
+        }
+	
+}
+
+ class Add extends Cal{
+	  public void getAdd()
+		{
+		 System.out.println("x:"+x);
+		 System.out.println("y:"+y);
+		 System.out.println("Addition is:"+ (x+y));
+
+		}
+            }
+	
+ class Sub extends Cal
+	{
+	  public void getSub()
+		{
+		 System.out.println("x:"+x);
+		 System.out.println("y:"+y);
+		 System.out.println("Sunstraction is:"+( x-y));
+
+		}
+	}
+
+
+
+class Mult extends Cal
+	{
+	  public void getMult()
+		{
+		 System.out.println("x:"+x);
+		 System.out.println("y:"+y);
+		 System.out.println("Mltiplication is:"+ x*y);
+
+		}
+	}
+
+class Div extends Cal
+{
+	  public void getDiv()
+		{
+		 System.out.println("x:"+x);
+		 System.out.println("y:"+y);
+		 System.out.println("Division is"+x/y);
+
+		}
+	}
+
+
+class Calculator2_F
+	{
+	 public static void main(String args[])
+		{
+	Scanner sc= new Scanner(System.in);
+       
+		 
+
+	do
+	{
+	 System.out.println("Enter the choice here");
+	System.out.println("1.Add");
+	System.out.println("2.Sub");
+	System.out.println("3.Mult");
+	System.out.println("4.Div");
+	System.out.println("5.exit");
+	System.out.println("Enter the choice here");
+	int choice=sc.nextInt();
+	
+		Add a = new Add();
+		 a.SetVariable(10,12);
+		
+		 Sub s= new Sub();
+		 s.SetVariable(10,10);
+	
+		Mult m = new Mult();
+		m.SetVariable(10,5);
+		
+		Div d= new Div();
+		d.SetVariable(15,5);
+	switch(choice)
+	{
+	 case 1:
+		 a.getAdd();
+		 break;
+		
+		
+	case 2:
+		 s.getSub();
+		 break;
+
+	case 3:
+		m.getMult();
+		break;
+
+	case 4:
+		d.getDiv();
+		break;		
+		
+	case 5:
+		System.exit(0);
+		break;
+		
+ 
+	default:
+		System.out.println("Invalid input");
+		break;
+		}
+		}while(true);
+		
+	}
+}
+
